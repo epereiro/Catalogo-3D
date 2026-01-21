@@ -361,52 +361,52 @@
         .login-box button:hover { background-color: #f40612; }
         .error-msg { color: red; margin-top: 10px; display: none; }
 
-        /* --- VERSIÓN MÓVIL (Menú inferior fijo) --- */
-    @media (max-width: 768px) {
-        
-        body {
-            /* Espacio extra al final para que la barra no tape el último modelo */
-            padding-bottom: 80px !important; 
-            flex-direction: column !important;
-        }
-
-        /* AQUÍ ESTABA EL ERROR: Ahora apuntamos a .menu-lateral */
-        .menu-lateral { 
-            /* POSICIONAMIENTO */
-            position: fixed !important;
-            bottom: 0 !important;       /* Pegado al suelo */
-            left: 0 !important;
-            width: 100% !important;
-            top: auto !important;       /* Anulamos cualquier 'top' de la versión PC */
-            height: 70px !important;    /* Altura fija */
-            
-            /* ESTETICA */
-            background-color: #1e1e1e !important;
-            z-index: 9999 !important;   /* Por encima de todo */
-            border-top: 2px solid #e50914;
-            border-left: none !important;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.8) !important;
-
-            /* COMPORTAMIENTO FLEX (FILA HORIZONTAL) */
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            overflow-x: auto !important;    /* Scroll lateral permitido */
-            overflow-y: hidden !important;  /* Scroll vertical prohibido */
-            padding: 0 10px !important;
-            white-space: nowrap !important;
-        }
-
-        /* Ocultar la barra de desplazamiento fea */
-        .menu-lateral::-webkit-scrollbar { display: none; }
-
-        /* Ajuste de los botones dentro del menú */
-        /* Apuntamos a los botones que haya dentro de .menu-lateral */
-        .menu-lateral button, .menu-lateral div {
-            margin: 0 5px !important;
-            flex-shrink: 0 !important; /* Evita que se aplasten */
-        }
+    /* --- VERSIÓN MÓVIL (Menú inferior fijo) --- */
+@media (max-width: 768px) {
+    
+    body {
+        /* Espacio extra al final para que la barra no tape el último modelo */
+        padding-bottom: 80px !important; 
+        flex-direction: column !important;
     }
+
+    /* AQUÍ ESTABA EL ERROR: Ahora apuntamos a .menu-lateral */
+    .menu-lateral { 
+        /* POSICIONAMIENTO */
+        position: fixed !important;
+        bottom: 0 !important;       /* Pegado al suelo */
+        left: 0 !important;
+        width: 100% !important;
+        top: auto !important;       /* Anulamos cualquier 'top' de la versión PC */
+        height: 70px !important;    /* Altura fija */
+        
+        /* ESTETICA */
+        background-color: #1e1e1e !important;
+        z-index: 9999 !important;   /* Por encima de todo */
+        border-top: 2px solid #e50914;
+        border-left: none !important;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.8) !important;
+
+        /* COMPORTAMIENTO FLEX (FILA HORIZONTAL) */
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        overflow-x: auto !important;    /* Scroll lateral permitido */
+        overflow-y: hidden !important;  /* Scroll vertical prohibido */
+        padding: 0 10px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Ocultar la barra de desplazamiento fea */
+    .menu-lateral::-webkit-scrollbar { display: none; }
+
+    /* Ajuste de los botones dentro del menú */
+    /* Apuntamos a los botones que haya dentro de .menu-lateral */
+    .menu-lateral button, .menu-lateral div {
+        margin: 0 5px !important;
+        flex-shrink: 0 !important; /* Evita que se aplasten */
+    }
+}
     </style>
 </head>
 <body>
